@@ -1,0 +1,688 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>หน้าหลัก</title>
+
+        <!-- css -->
+            <!-- bulma -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+            <!-- sweertalert 2-->
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <!-- icon font-awesome -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+            <!-- animation -->
+            <link rel="stylesheet" href="/css/template/animation.css">
+
+            <!-- profile -->
+            <link rel="stylesheet" href="/css/profile.css">
+            <!-- leaflet -->
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
+
+        <!-- font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Itim&family=Sarabun&family=Noto+Sans+Thai:wght@100;200&display=swap" rel="stylesheet">
+
+        <!-- script -->
+        <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    </head>
+    <body>
+        <!-- loading page-->
+        <div>
+            
+        </div>
+        
+        <!-- body page-->
+        <div style="display:block;">
+
+            <!-- navbar -->
+            <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                <a class="navbar-item" href="/" style="font-size: 25px;">
+                    E-Portfolio
+                </a>
+            
+                <a role="button" id="navbar-burger" class="navbar-burger" aria-label="menu" aria-expanded="false" >
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+                </div>
+            
+                <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="/">
+                        Home
+                    </a>
+            
+                    <a class="navbar-item is-active">
+                        ABOUT
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Activities / Works
+                        </a>
+                
+                        <div class="navbar-dropdown">
+                          <a class="navbar-item" href="/activity/activities.html">
+                            <i class="fa-solid fa-briefcase"></i>&nbsp;&nbsp;Activities
+                          </a>
+                          <a class="navbar-item">
+                            <i class="fa-sharp fa-solid fa-code"></i>&nbsp;&nbsp;Works
+                          </a>
+                        </div>
+                    </div>
+                    
+                    <a class="navbar-item">
+                        Certificates
+                    </a>
+            
+                </div>
+            
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary">
+                        <strong><i class="fa-brands fa-github"></i> Source Code</strong>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </nav>
+            <!-- end navbar -->
+
+            <!-- data -->
+            <div class="is-hidden-mobile is-hidden-tablet-only is-hidden-desktop-only">
+            <section class="hero is-Light is-fullheight">
+                <div class="hero-body">
+                <!-- about me -->
+                    <div class="container is-centered">
+                    <div class="columns is-gapless">
+                    <div class="column">
+                        <div class="columns">
+                            <div class="column is-four-fifths">
+                                <div style="margin-top: 100px;">
+                                    <t style="font-size: 25px;font-family: 'Itim';line-height:0px;">สวัสดีครับ! ผม</t><br>
+                                    <div class="typewriter">
+                                        <p style="font-size: 50px;font-family: 'Itim';line-height:80px;">กรฤต แสงทอง</p>
+                                    </div>
+                                    <div class="fadeInLeft">
+                                    <t style="font-size: 25px;font-family: 'Itim';line-height:27px;">จุดเริ่มต้นการเขียนโปรแกรมเกิดจาก เกม ความอยากพัฒนาเซิฟเวอร์เกม ทำให้ผมเริ่มมาเขียนระบบของเซิฟเวอร์เกม จนกลายมาเป็นการพัฒนา web , chatbot</t><br>
+                                    </div>
+                                    <div style="height: 1rem;"></div>
+                                    <button class="fadeInDown button is-primary"><strong>Education</strong></button>
+                                    <button class="fadeInDown animation-delay-1 button is-info"><strong>Contact</strong></button>
+                                    <button class="fadeInDown animation-delay-2 button is-dark"><strong>Dev Skill</strong></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height: 2rem;"></div>
+                    <div class="column is-half">
+                        <div style="">
+                            <img src="/img/profile_about.png" style="width: 1280px;height: auto">
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            </div>  
+            <div class="is-hidden-widescreen-only is-hidden-fullhd">
+                <section class="hero is-Light is-fullheight">
+                    <div class="hero-body">
+                    <!-- about me -->
+                      <div class="container is-centered">
+                        <div class="columns is-gapless">
+                        <div class="column">
+                            <div class="columns">
+                                <div class="column is-four-fifths">
+                                    <t style="font-size: 25px;font-family: 'Itim';line-height:0px;">สวัสดีครับ! ผม</t><br>
+                                    <t style="font-size: 50px;font-family: 'Itim';line-height:80px;">กรฤต แสงทอง</t><br>
+                                    <t style="font-size: 25px;font-family: 'Itim';line-height:27px;">จุดเริ่มต้นการเขียนโปรแกรมเกิดจาก เกม ความอยากพัฒนาเซิฟเวอร์เกม ทำให้ผมเริ่มมาเขียนระบบของเซิฟเวอร์เกม จนกลายมาเป็นการพัฒนา web , chatbot</t><br>
+                                    
+                                    <div style="height: 1rem;"></div>
+                                    <button class="button is-primary button-hover"><strong>Education</strong></button>
+                                    <button class="button is-info button-hover"><strong>Contact</strong></button>
+                                    <button class="button is-dark button-hover"><strong>Dev Skill</strong></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="height: 2rem;"></div>
+                        <div class="column is-half">
+                            <div class="card card_hover">
+                                <div class="card-image">
+                                    <img src="/img/profile_about.png" style="width: 1280px;height: auto">
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+            </div>
+                
+                
+            <!-- education -->
+            <div class="is-hidden-tablet-only">
+            <section class="hero is-Primary is-halfheight">
+                <div class="hero-body">
+                <div class="container is-centered">
+                    <p class="title" style="text-align: center;">ประวัติการศึกษา</p>
+                    <div style="height: 1rem;"></div>
+                        <div class="columns is-full is-centered">
+                            <div class="column is-two-fifths">
+                                <div class="card card_hover">
+
+                                    <div class="card-image">
+                                        <div class="image is-3by2 image-hover"id="map_d1"></div>
+                                    </div>
+                                    <div class="card-content">
+                                      <div class="media">
+                                        <div class="media-left">
+                                          <figure class="image is-128x128">
+                                            <img src="https://data.bopp-obec.info/emis/pic_school/1040050095.jpg" alt="Placeholder image" style="width: 80%;">
+                                          </figure>
+                                        </div>
+                                        <!--<div class="media-right">-->
+                                            <div class="is-hidden-mobile is-hidden-tablet-only is-hidden-desktop-only">
+                                                <div class="media-right">
+                                                    <div style="height: 2.5rem;"></div>
+                                                    <p style="font-size: 2rem;color: #000000;font-family: 'Sarabun';">โรงเรียนบ้านโน่นม่วง</p>
+                                                </div>
+                                            </div>
+                                            <div class="is-hidden-widescreen-only is-hidden-fullhd">
+                                                <div class="media-right">
+                                                    <div style="height: 2rem;"></div>
+                                                    <p style="font-size: 2rem;color: #000000;font-family: 'Sarabun';">โรงเรียนบ้านโน่นม่วง</p>
+                                                </div>
+                                            </div>
+                                        <!--</div>-->
+                                      </div>
+                                  
+                                      <div class="content" style="color: #000000;font-size: 20px;">
+                                        ระดับอนุบาลปีที่ 1 - 2&nbsp;&nbsp;&nbsp;<span class="tag is-warning" style="font-size: 18px;">GPAX -</span><br><br>
+                                        ระดับประถมศึกษาปีที่ 1&nbsp;&nbsp;&nbsp;<span class="tag is-success" style="font-size: 18px;">GPAX -</span>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                var map_d1 = L.map('map_d1').setView([16.490188678235256, 102.81355532941012], 20);
+
+                                L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+                                    attribution: '&copy; google map',
+                                    subdomains:['mt0','mt1','mt2','mt3']
+                                }).addTo(map_d1);
+
+                            </script>
+
+                            <div class="column is-two-fifths">
+                                <div class="card card_hover">
+
+                                    <div class="card-image">
+                                      <div class="image is-3by2" id="map_d2"></div>
+                                    </div>
+                                    <div class="card-content">
+                                      <div class="media">
+                                        <div class="media-left">
+                                          <figure class="image is-128x128">
+                                            <img src="https://data.bopp-obec.info/emis/pic_school/1064620210.jpg" alt="Placeholder image">
+                                          </figure>
+                                        </div>
+                                        <!-- <div class="media-right"> -->
+                                            <div class="is-hidden-mobile is-hidden-tablet-only is-hidden-desktop-only">
+                                                <div class="media-right">
+                                                    <div style="height: 2.5rem;"></div>
+                                                    <p style="font-size: 2rem;color: #000000;font-family: 'Sarabun';">โรงเรียนไชยะวิทยา</p>
+                                                </div>
+                                            </div>
+                                            <div class="is-hidden-widescreen-only is-hidden-fullhd">
+                                                <div class="media-right">
+                                                    <div style="height: 2rem;"></div>
+                                                    <p style="font-size: 2rem;color: #000000;font-family: 'Sarabun';">โรงเรียนไชยะวิทยา</p>
+                                                </div>
+                                            </div>
+                                        <!-- </div> -->
+                                      </div>
+                                  
+                                      <div class="content" style="color: #000000;font-size: 20px;">
+                                        ระดับประถมศึกษาปีที่ 2 - 6&nbsp;&nbsp;&nbsp;<span class="tag is-success" style="font-size: 18px;">GPAX</span><br><br><br>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                var map_d2 = L.map('map_d2').setView([17.390704159169495, 99.80149652122218], 20);
+
+                                L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+                                    attribution: '&copy; google map',
+                                    subdomains:['mt0','mt1','mt2','mt3']
+                                }).addTo(map_d2);
+
+                            </script>
+
+                            <div class="column is-two-fifths">
+                                <div class="card card_hover">
+
+                                    <div class="card-image">
+                                        <div class="image is-3by2" id="map_d3"></div>
+                                    </div>
+                                    <div class="card-content">
+                                      <div class="media">
+                                        <div class="media-left">
+                                          <figure class="image is-128x128">
+                                            <img src="http://www.sawananan.ac.th/images/sw.jpg" alt="Placeholder image">
+                                          </figure>
+                                        </div>
+                                        <!--<div class="media-right">-->
+                                            <div class="is-hidden-mobile is-hidden-tablet-only is-hidden-desktop-only">
+                                                <div class="media-right">
+                                                    <div style="height: 2.5rem;"></div>
+                                                    <p style="font-size: 29px;color: #000000;font-family: 'Sarabun';">โรงเรียนสวรรค์อนันต์วิทยา</p>
+                                                </div>
+                                            </div>
+                                            <div class="is-hidden-widescreen-only is-hidden-fullhd">
+                                                <div class="media-right">
+                                                    <div style="height: 2.5rem;"></div>
+                                                    <p style="font-size: 2rem;color: #000000;font-family: 'Sarabun';">โรงเรียนสวรรค์อนันต์วิทยา</p>
+                                                </div>
+                                            </div>
+                                        <!--</div>-->
+                                      </div>
+                                  
+                                      <div class="content" style="color: #000000;font-size: 20px;">
+                                        ระดับมัธยมศึกษาปีที่ 1 - 3&nbsp;&nbsp;&nbsp;<span class="tag is-warning" style="font-size: 18px;">GPAX</span><br><br>
+                                        ระดับมัธยมศึกษาปีที่ 4 - 6&nbsp;&nbsp;&nbsp;<span class="tag is-success" style="font-size: 18px;">GPAX (5 เทอม)</span>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                var map_d3 = L.map('map_d3').setView([17.29568568551554, 99.83788546958284], 20);
+
+                                L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+                                    attribution: '&copy; google map',
+                                    subdomains:['mt0','mt1','mt2','mt3']
+                                }).addTo(map_d3);
+
+                            </script>
+                        </div>
+                </div>            
+                </div>
+            </section>
+            </div>
+            <!-- tablet only-->
+            <div class="is-hidden-mobile is-hidden-desktop-only is-hidden-widescreen-only is-hidden-fullhd">
+                <section class="hero is-Primary is-halfheight">
+                    <div class="hero-body">
+                    <div class="container is-centered">
+                        <p class="title" style="text-align: center;">ประวัติการศึกษา</p>
+                        <div style="height: 1rem;"></div>
+                            <div class="columns is-full is-centered">
+                                <div class="column" style="max-height: 60rem;">
+                                    <div class="card card_hover">
+    
+                                        <div class="card-image">
+                                            <div class="image is-3by2" id="map_m1"></div>
+                                        </div>
+                                        <div class="card-content">
+                                          <div class="media">
+                                            <div class="media-left">
+                                              <figure class="image is-128x128">
+                                                <img src="https://data.bopp-obec.info/emis/pic_school/1040050095.jpg" alt="Placeholder image" style="width: 80%;">
+                                              </figure>
+                                            </div>
+                                            <div class="media-right">
+                                                <div style="height: 2rem;"></div>
+                                                <div class="is-hidden-mobile is-hidden-tablet-only is-hidden-desktop-only">
+                                                    <p style="font-size: 30px;color: #000000;font-family: 'Sarabun';">โรงเรียนบ้านโน่นม่วง</p>
+                                                </div>
+                                                <div class="is-hidden-widescreen-only is-hidden-fullhd">
+                                                    <p style="font-size: 50px;color: #000000;font-family: 'Sarabun';">โรงเรียนบ้านโน่นม่วง</p>
+                                                </div>
+                                            </div>
+                                          </div>
+                                      
+                                          <div class="content" style="color: #000000;font-size: 35px;">
+                                            ระดับอนุบาลปีที่ 1 - 2&nbsp;&nbsp;&nbsp;<span class="tag is-warning" style="font-size: 18px;">GPAX - </span><br>
+                                            ระดับประถมศึกษาปีที่ 1&nbsp;&nbsp;&nbsp;<span class="tag is-success" style="font-size: 18px;">GPAX - </span>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    var map_m1 = L.map('map_m1').setView([16.490188678235256, 102.81355532941012], 20);
+    
+                                    L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+                                        attribution: '&copy; google map',
+                                        subdomains:['mt0','mt1','mt2','mt3']
+                                    }).addTo(map_m1);
+    
+                                </script>
+                            </div>
+                            <div class="columns is-full is-centered">
+                                <div class="column">
+                                    <div class="card card_hover">
+    
+                                        <div class="card-image">
+                                            <div class="image is-3by2" id="map_m2"></div>
+                                        </div>
+                                        <div class="card-content">
+                                          <div class="media">
+                                            <div class="media-left">
+                                              <figure class="image is-128x128">
+                                                <img src="https://data.bopp-obec.info/emis/pic_school/1064620210.jpg" alt="Placeholder image">
+                                              </figure>
+                                            </div>
+                                            <div class="media-right">
+                                                <div class="is-hidden-mobile is-hidden-tablet-only is-hidden-desktop-only">
+                                                    <div class="media-right">
+                                                        <div style="height: 2rem;"></div>
+                                                        <p style="font-size: 2rem;color: #000000;font-family: 'Sarabun';">โรงเรียนไชยะวิทยา</p>
+                                                    </div>
+                                                </div>
+                                                <div class="is-hidden-widescreen-only is-hidden-fullhd">
+                                                    <div class="media-right">
+                                                        <div style="height: 2rem;"></div>
+                                                        <p style="font-size: 50px;color: #000000;font-family: 'Sarabun';">โรงเรียนไชยะวิทยา</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          </div>
+                                      
+                                          <div class="content" style="color: #000000;font-size: 35px;">
+                                            ระดับประถมศึกษาปีที่ 2 - 6&nbsp;&nbsp;&nbsp;<span class="tag is-success" style="font-size: 18px;">GPAX</span><br> 
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    var map_m2 = L.map('map_m2').setView([17.390704159169495, 99.80149652122218], 13);
+    
+                                    L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+                                        attribution: '&copy; google map',
+                                        subdomains:['mt0','mt1','mt2','mt3']
+                                    }).addTo(map_m2);
+    
+                                </script>
+                            </div>
+                            <div class="columns is-full is-centered">
+                                <div class="column" style="max-height: 60rem;">
+                                    <div class="card card_hover">
+    
+                                        <div class="card-image">
+                                          <div class="image is-3by2" id="map_m3"></div>
+                                        </div>
+                                        <div class="card-content">
+                                          <div class="media">
+                                            <div class="media-left">
+                                              <figure class="image is-128x128">
+                                                <img src="http://www.sawananan.ac.th/images/sw.jpg" alt="Placeholder image">
+                                              </figure>
+                                            </div>
+                                            <!--<div class="media-right">-->
+                                                <div class="is-hidden-mobile is-hidden-tablet-only is-hidden-desktop-only">
+                                                    <div class="media-right">
+                                                        <div style="height: 2.5rem;"></div>
+                                                        <p style="font-size: 2rem;color: #000000;font-family: 'Sarabun';">โรงเรียนสวรรค์อนันต์วิทยา</p>
+                                                    </div>
+                                                </div>
+                                                <div class="is-hidden-widescreen-only is-hidden-fullhd">
+                                                    <div class="media-right">
+                                                        <div style="height: 2rem;"></div>
+                                                        <t style="font-size: 3rem;color: #000000;font-family: 'Sarabun';">โรงเรียนสวรรค์อนันต์วิทยา</t>
+                                                    </div>
+                                                </div>
+                                            <!--</div>-->
+                                          </div>
+                                      
+                                          <div class="content" style="color: #000000;font-size: 35px;">
+                                            ระดับมัธยมศึกษาปีที่ 1 - 3&nbsp;&nbsp;&nbsp;<span class="tag is-warning" style="font-size: 18px;">GPAX</span><br>
+                                            ระดับมัธยมศึกษาปีที่ 4 - 6&nbsp;&nbsp;&nbsp;<span class="tag is-success" style="font-size: 18px;">GPAX (5เทอม)</span>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    var map_m3 = L.map('map_m3').setView([17.29568568551554, 99.83788546958284], 13);
+    
+                                    L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+                                        attribution: '&copy; google map',
+                                        subdomains:['mt0','mt1','mt2','mt3']
+                                    }).addTo(map_m3);
+    
+                                </script>
+                            </div>
+                        </div>
+                    </div>            
+                    </div>
+                </section>
+            </div>
+
+
+            <!-- contact -->
+            <!-- desktop only-->
+            <div class="is-hidden-mobile is-hidden-tablet-only is-hidden-desktop-only">
+            <section class="hero is-medium is-Link">
+                <div class="hero-body">
+                    <div class="container">
+                    <div class="columns is-centered">
+                        <div class="column is-four-fifths has-text-centered">
+                            <t style="font-size: 40px;">ช่องทางติดต่อ</t>
+                            <div style="height: 1rem;"></div>
+                            <div class="columns is-mobile is-centered">
+                                <div class="column is-1 image-hover">
+                                    <img onclick="navigator.clipboard.writeText('krtza1@gmail.com');" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" style="height: 80%;">
+                                </div>
+                                <div class="column is-1 image-hover">
+                                    <a href="https://www.facebook.com/krt.korarit" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png" style="height: 90%;"></a>
+                                </div>
+                                <div class="column is-1 image-hover">
+                                    <a href="https://github.com/korarit" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" style="height: 90%;"></a>
+                                </div>
+                                <div class="column is-1 image-hover">
+                                    <a href="https://www.youtube.com/channel/UC3ZDblNrSZRnJe_-0Zv52QA" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png" style="height: 80%;"></a>
+                                </div>
+                                <div class="column is-1 image-hover" >
+                                    <a onclick="copytoclipboard('TheStepKla#0937');" ><img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/625e5f775305fb9733389e0f_Discord-Logo-Black%20(1).png" style="height: 100%;"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            </div>
+            <div class="is-hidden-widescreen-only is-hidden-fullhd">
+            <section class="hero is-medium is-Link">
+                <div class="hero-body">
+                    <div class="container">
+                    <div class="columns is-centered">
+                        <div class="column is-four-fifths has-text-centered">
+                            <t style="font-size: 30px;">ช่องทางติดต่อ</t>
+                            <div style="height: 1rem;"></div>
+                            <div class="columns is-mobile is-centered">
+                                <div class="column is-2 image-hover">
+                                    <img onclick="navigator.clipboard.writeText('krtza1@gmail.com');" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" style="height: 80%;">
+                                </div>
+                                <div class="column is-2 image-hover">
+                                    <a href="https://www.facebook.com/krt.korarit" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png" style="height: 90%;"></a>
+                                </div>
+                                <div class="column is-2 image-hover">
+                                    <a href="https://github.com/korarit" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" style="height: 90%;"></a>
+                                </div>
+                                <div class="column is-2 image-hover">
+                                    <a href="https://www.youtube.com/channel/UC3ZDblNrSZRnJe_-0Zv52QA" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png" style="height: 80%;"></a>
+                                </div>
+                                <div class="column is-2 image-hover">
+                                    <a href="https://www.youtube.com/channel/UC3ZDblNrSZRnJe_-0Zv52QA" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png" style="height: 80%;"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            </div>
+
+
+            <!-- skill -->
+            <section class="hero is-info is-medium">
+                <div class="hero-body is-align-items-start">
+                  <div class="container">
+                    <div class="columns is-full is-centered">
+                        <div class="column has-text-centered">
+
+                        <!-- skill title-->
+                        <div class="is-hidden-mobile is-hidden-tablet-only is-hidden-desktop-only">
+                            <p class="title" style="font-size: 50px;">สกิลของผม</p>
+                            <div style="height: 1rem;"></div>
+                        </div>
+                        <div class="is-hidden-widescreen-only is-hidden-fullhd">
+                            <p class="title" style="font-size: 35px;">สกิลของผม</p>
+                            <div style="height: 0.5rem;"></div>
+                        </div>
+                        
+
+                        <!-- logo for desktop -->
+                        <div class="is-hidden-mobile is-hidden-tablet-only is-hidden-desktop-only">
+                            <div class="columns is-mobile is-centered">
+                                <div class="column is-1">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" style="height: 70px;">
+                                </div>
+                                <div class="column is-1">
+                                    <img src="https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-mysql-logo-png-images-are-download-crazypng-21.png" style="height: 80px;">
+                                </div>
+                                <div class="column is-1">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" style="height: 80px;">
+                                </div>
+                                <div class="column is-1">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" style="height: 80px;">
+                                </div>
+                                <div class="column is-1">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" style="height: 80px;">
+                                </div>
+                                <div class="column is-1">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" style="height: 80px;">
+                                </div>
+                                <div class="column is-1">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png" style="height: 80px;">
+                                </div>
+                                <div class="column is-1">
+                                    <img src="https://seeklogo.com/images/B/bulma-logo-45B5145BF4-seeklogo.com.png" style="height: 80px;">
+                                </div>
+                            </div>
+                            <div style="height: 1rem;"></div>
+                            <div class="columns is-centered">
+                                <div class="column is-1">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png" style="height: 80px;">
+                                </div>
+                                <div class="column is-1">
+                                    <img src="https://www.gstatic.com/devrel-devsite/prod/v24d520161c9661e427a3f6fa9973bfca56d0972dca82fa8ef65c709d915e80f3/firebase/images/touchicon-180.png" style="height: 80px;">
+                                </div>
+                                <div class="column is-1">
+                                    <img src="https://seeklogo.com/images/D/dialogflow-logo-534FF34238-seeklogo.com.png" style="height: 80px;">
+                                </div>
+                                <div class="column is-1">
+                                    <img src="https://i.scdn.co/image/bc3fe2e52ff72b04e349883f754736b2ae9d799c" style="height: 80px;">
+                                </div>
+                                <div class="column is-1">
+                                    <img src="https://pbs.twimg.com/profile_images/378800000344863148/9ef95b0c49d34a3aa2fe6669b6101d74_400x400.png" style="height: 80px;">
+                                </div>
+                                <div class="column is-1">
+                                    <img src="https://www.tellmebest.com/wp-content/uploads/2022/03/discord-logo-4-1.png" style="height: 80px;">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- logo for mobile-->
+                        <div class="is-hidden-widescreen-only is-hidden-fullhd">
+                            <div class="columns is-mobile is-centered">
+                                <div class="column">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" style="height: 100%;">
+                                </div>
+                                <div class="column">
+                                    <img src="https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-mysql-logo-png-images-are-download-crazypng-21.png" style="height: 100%;">
+                                </div>
+                                <div class="column">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" style="height: 100%;">
+                                </div>
+                                <div class="column">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" style="height: 100%;">
+                                </div>
+                                <div class="column">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" style="height: 100%;">
+                                </div>
+                                <div class="column">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" style="height: 100%;">
+                                </div>
+                            </div>
+                            <div class="columns is-mobile is-centered">
+                                <div class="column">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png" style="height: 100%;">
+                                </div>
+                                <div class="column">
+                                    <img src="https://seeklogo.com/images/B/bulma-logo-45B5145BF4-seeklogo.com.png" style="height: 100%;">
+                                </div>
+                                <div class="column">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png" style="height: 100%;">
+                                </div>
+                                <div class="column">
+                                    <img src="https://www.gstatic.com/devrel-devsite/prod/v24d520161c9661e427a3f6fa9973bfca56d0972dca82fa8ef65c709d915e80f3/firebase/images/touchicon-180.png" style="height: 100%;">
+                                </div>
+                                <div class="column">
+                                    <img src="https://seeklogo.com/images/D/dialogflow-logo-534FF34238-seeklogo.com.png" style="height: 100%;">
+                                </div>
+                                <div class="column">
+                                    <img src="https://i.scdn.co/image/bc3fe2e52ff72b04e349883f754736b2ae9d799c" style="height: 100%;">
+                                </div>
+                            </div>
+                            <div class="columns is-mobile is-centered">
+                                <div class="column is-2">
+                                    <img src="https://pbs.twimg.com/profile_images/378800000344863148/9ef95b0c49d34a3aa2fe6669b6101d74_400x400.png" style="height: 100%;">
+                                </div>
+                                <div class="column is-2">
+                                    <img src="https://www.tellmebest.com/wp-content/uploads/2022/03/discord-logo-4-1.png" style="height: 100%;">
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                  </div>
+                </div>
+              </section>
+
+        </div>
+
+        <!-- javascript-->
+            <!-- bulma -->
+            <script src="/js/bulma.js"></script>
+            <!-- page-->
+            <script src="/js/profile.js"></script>
+
+        <!-- footer -->
+        <footer class="footer is-centered" style="background-color: #ffe4b1;">
+            <div class="container">
+              <div class="columns is-centered">
+                <div class="column is-four-fifths">
+                    <div class="columns">
+                        <div class="column has-text-centered">
+                            <div style="height: 2rem;"></div>
+                            <p style="font-size: 20px;">
+                                <strong style="">E-Portfolio</strong> by <a href="https://www.facebook.com/krt.korarit" target="_blank" style="">Korarit Saengthong</a> Copyright &copy; 2022 - 2023
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

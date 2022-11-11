@@ -1,0 +1,411 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>หน้าหลัก</title>
+
+        <!-- css -->
+            <!-- bulma -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+            <!-- sweertalert 2-->
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <!-- icon font-awesome -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+            <!-- timeline -->
+            <link rel="stylesheet" href="/css/template/timeline.css">
+            <!-- animation -->
+            <link rel="stylesheet" href="/css/template/animation.css">
+
+            <!-- index -->
+            <link rel="stylesheet" href="/css/index.css">
+
+        <!-- font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Itim&family=Sarabun&family=Noto+Sans+Thai:wght@100;200&display=swap" rel="stylesheet">
+
+
+        <!-- javascript -->
+    </head>
+    <body>
+        <!-- loading page-->
+        <div>
+
+        </div>
+
+        <!-- page-->
+        <div style="display:block;">
+
+            <!-- navbar -->
+            <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                <a class="navbar-item" href="/" style="font-size: 25px;">
+                    E-Portfolio
+                </a>
+            
+                <a role="button" id="navbar-burger" class="navbar-burger" aria-label="menu" aria-expanded="false" >
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+                </div>
+            
+                <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item is-active">
+                        Home
+                    </a>
+            
+                    <a class="navbar-item" href="/profile.html">
+                        ABOUT
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Activities / Works
+                        </a>
+                
+                        <div class="navbar-dropdown">
+                          <a class="navbar-item" href="/activity/activities.html">
+                            <i class="fa-solid fa-briefcase"></i>&nbsp;&nbsp;Activities
+                          </a>
+                          <a class="navbar-item">
+                            <i class="fa-sharp fa-solid fa-code"></i>&nbsp;&nbsp;Works
+                          </a>
+                        </div>
+                    </div>
+                    
+                    <a class="navbar-item">
+                        Certificates
+                    </a>
+            
+                </div>
+            
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary">
+                        <strong><i class="fa-brands fa-github"></i> Source Code</strong>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </nav>
+            <!-- end navbar -->
+
+            <!-- welcome -->
+            <section class="hero is-primary is-fullheight">
+                <div class="hero-body">
+                  <!-- about me -->
+                  <div class="container is-centered">
+                    <div class="columns is-gapless">
+                    <div class="column">
+                        <div class="columns">
+                            <div class="column is-four-fifths">
+                                <div class="page-title-box">
+                                    <t style="font-size: 25px;font-family: 'Itim';line-height:0px;">สวัสดีครับ! ผม</t><br>
+                                    <div class="typewriter">
+                                      <p style="font-size: 40px;font-family: 'Itim';line-height:70px;">ยินดีต้อนรับสู่ E-Portfolio ของผม</p>
+                                    </div>
+                                    <div class="fadeInLeft">
+                                    <t style="font-size: 25px;font-family: 'Itim';line-height:27px;">นี่คือเว็ปไซต์รวบรวม ผลงาน ด้านต่างๆ และ ประวัติของผม</t><br>
+                                    </div>
+                                    <div style="height: 1rem;"></div>
+                                    <button class="fadeInDown button is-danger"><strong>Timeline</strong></button>
+                                    <button class="fadeInDown animation-delay-1 button is-info"><strong>Contest</strong></button>
+                                    <button class="fadeInDown animation-delay-2 button is-warning"><strong>Works</strong></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height: 2rem;"></div>
+                    <div class="column is-half">
+                        <figure class="image is-16by9">
+                            <iframe class="has-ratio" width="560" height="315" src="https://www.youtube.com/embed/I6b1wpA9TBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </figure>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- timeline -->
+            <section class="hero is-danger is-fullheight">
+                <div class="hero-body">
+                <!-- about me -->
+
+                  <div class="container is-centered">
+                    <p class="is-size-2 has-text-centered" style="font-family: 'Itim';">Timeline การพัฒนาตัวเองของผม</p>
+                    <div style="height: 3rem;"></div>
+                    <div class="columns is-gapless is-centered">
+                    <div class="column is-12">
+                        <div class="timeline">
+                            <div class="container-timeline limeline-is-1 left">
+                              <div id="play-animation-left" class="content-timeline" style="color: #000000;">
+                                <h2 class="is-size-4" style="font-family: 'Itim';">2015 (ระดับชั้นประถมศึกษาปีที่ 5)</h2>
+                                <p style="margin-top: 5px;font-family: 'Itim';font-size: 20px;">- สร้างเว็ปไซต์ด้วย google site</p>
+                                <p style="margin-top: 5px;font-family: 'Itim';font-size: 20px;">- แข่งขันภาพยนต์สั้น ระดับประถมศึกษาปีที่ 4 - 6</p>
+                              </div>
+                            </div>
+                            <div class="container-timeline limeline-is-2 right">
+                              <div id="play-animation-right" class="content-timeline" style="color: #000000;">
+                                <h2 class="is-size-4" style="font-family: 'Itim';">2016 (ระดับชั้นประถมศึกษาปีที่ 6)</h2>
+                                <p style="font-family: 'Itim';font-size: 20px;">- เข้าค่ายประวัติศาสตร์ องค์การบริหารการพัฒนาพื้นที่พิเศษเพื่อการท่องเที่ยวอย่างยั่งยืน (องค์การมหาชน) เขต 4 ได้เป็นตัวแทนไปศึกษาดูงานที่ ประเทศกัมพูชา</p>
+                                <p style="margin-top: 5px;font-family: 'Itim';font-size: 20px;">- มีช่อง YouTube แคสเกมส์ของตัวเอง ชื่อ KRT CHANNEL</p>
+                              </div>
+                            </div>
+                            <div class="container-timeline limeline-is-3 left">
+                              <div id="play-animation-left" class="content-timeline" style="color: #000000;">
+                                <h2 class="is-size-4" style="font-family: 'Itim';">2018 (ระดับชั้นมัธยมศึกษาปีที่ 2)</h2>
+                                <p style="font-family: 'Itim';font-size: 20px;">- ได้เป็นผู้ช่วยแอดมินเซิฟเวอร์เกม ช่วยดูแลผู้เล่นภายในเซิฟ</p>
+                              </div>
+                            </div>
+                            <div class="container-timeline limeline-is-4 right">
+                              <div id="play-animation-right" class="content-timeline" style="color: #000000;">
+                                <h2 class="is-size-4" style="font-family: 'Itim';">2019 (ระดับชั้นมัธยมศึกษาปีที่ 3)</h2>
+                                <p style="font-family: 'Itim';font-size: 20px;">- ได้มีโอกาสเรียนรู้ภาษา Python และ HTML จากวิชาคอมพิวเตอร์</p>
+                                <p style="margin-top: 5px;font-family: 'Itim';font-size: 20px;">- พัฒนาระบบของเซิฟเวอร์เกม minecraft bedrock ด้วยภาษา PHP</p>
+                              </div>
+                            </div>
+                            <div class="container-timeline limeline-is-5 left">
+                              <div id="play-animation-left" class="content-timeline" style="color: #000000;">
+                                <h2 class="is-size-4" style="font-family: 'Itim';">2020 - 2021 (ระดับชั้นมัธยมศึกษาปีที่ 4 - 5)</h2>
+                                <p style="font-family: 'Itim';font-size: 20px;">- พัฒนาเว็บแอปพลิเคชัน ด้วยภาษา PHP และ Python</p>
+                              </div>
+                            </div>
+                            <div class="container-timeline right">
+                              <div id="play-animation-right" class="content-timeline" style="color: #000000;">
+                                <h2 class="is-size-4" style="font-family: 'Itim';">Now (ระดับชั้นมัธยมศึกษาปีที่ 6 - ปัจจุบัน)</h2>
+
+                                <p style="font-family: 'Itim';font-size: 20px;">- พัฒนาเว็บแอปพลิเคชันด้วย PHP Python javascript </p>
+                                <p style="margin-top: 5px;font-family: 'Itim';font-size: 20px;">- พัฒนา Line แชทบอท และ แชทบอทตัวอื่นๆ </p>
+                                <p style="margin-top: 5px;font-family: 'Itim';font-size: 20px;">- แข่งศิลปหัตกรรมนักเรียนครั้งที่ 70 ระดับเขตพื้นที่ </p>
+                                <p style="margin-top: 5px;font-family: 'Itim';font-size: 20px;">- เข้าร่วมโครงการ gamer to coder ของบริษัท garena ประเทศไทย ร่วมกับกระทรวงศึกษาธิการ</p>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- contest ผลงานการแข่งขัน -->
+            <section class="hero is-info is-half">
+                <div class="hero-body">
+                  
+                    <div class="container">
+                        <p class="is-size-2 has-text-centered" style="font-family: 'Itim';">ผลงาน ด้านการแข่งขัน</p>
+                        <div style="height: 3rem;"></div>
+                        <div class="columns is-centered">
+
+                            <!-- แข่งศิลปหัถกรรมนักเรียนครั้งที่ 70 ระดับเขต-->
+                            <div class="column is-half">
+                                <div class="card">
+                                    <div class="card-image">
+                                      <figure class="image is-16by9">
+                                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                                      </figure>
+                                    </div>
+                                    <div class="card-content">
+                                      <div class="media">
+                                        <div class="media-left" style="width: 100%">
+                                            <p style="font-size: 30px;color: #000000;font-family: 'Itim';font-weight: lighter;">แข่งขันโครงงานคอมพิวเตอร์ประเภทซอฟต์แวร์</p>
+                                            <p class="subtitle" style="font-size: 20px;color: #000000;font-family: 'Itim';font-weight: lighter;">ศิลปหัถกรรมนักเรียนครั้งที่ 70 ระดับเขตพื้นที่ สพม.สุโขทัย</p>
+                                          </div>
+                                      </div>
+                                  
+                                      <div class="content">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                                        <a href="#">#css</a> <a href="#">#responsive</a>
+                                        <br>
+                                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+
+                            <!-- เข้าร่วมค่าย gamer to coder ของบริษัท garena ประเทศไทย ร่วมกับ กระทรวงศึกษาธิการ-->
+                            <div class="column is-half">
+                                <div class="card">
+                                    <div class="card-image">
+                                      <figure class="image is-16by9">
+                                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                                      </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="media">
+                                            <div class="media-left" style="width: 100%">
+                                                <p style="font-size: 30px;color: #000000;font-family: 'Itim';font-weight: lighter;">แข่งขันออกแบบเว็บไซต์ (fontend)</p>
+                                                <p class="subtitle" style="font-size: 20px;color: #000000;font-family: 'Itim';font-weight: lighter;">โครงการ gamer to coder ของบริษัท garena thailand</p>
+                                              </div>
+                                          </div>
+                                  
+                                      <div class="content">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                                        <a href="#">#css</a> <a href="#">#responsive</a>
+                                        <br>
+                                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </section>
+
+              <!-- work -->
+              <section class="hero is-warning is-halfheight">
+                <div class="hero-body">
+
+
+                    <div class="container">
+                        <p class="is-size-2 has-text-centered" style="font-family: 'Itim';">ผลงาน ด้านการพัฒนาซอฟต์แวร์</p>
+                        <div style="height: 3rem;"></div>
+                        <div class="columns is-multiline is-centered">
+
+                            <div class="column is-half">
+                                <div class="card">
+                                    <div class="card-image">
+                                      <figure class="image is-16by9">
+                                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                                      </figure>
+                                    </div>
+                                    <div class="card-content">
+                                      <div class="media">
+                                        <div class="media-left" style="width: 100%">
+                                            <p style="font-size: 35px;color: #000000;font-family: 'Itim';font-weight: lighter;">title</p>
+                                            <p class="subtitle" style="font-size: 20px;color: #000000;font-family: 'Itim';font-weight: lighter;">subtitle</p>
+                                          </div>
+                                      </div>
+                                  
+                                      <div class="content">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                                        <a href="#">#css</a> <a href="#">#responsive</a>
+                                        <br>
+                                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+
+                            <div class="column is-half">
+                                <div class="card">
+                                    <div class="card-image">
+                                      <figure class="image is-16by9">
+                                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                                      </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="media">
+                                            <div class="media-left" style="width: 100%">
+                                                <p style="font-size: 35px;color: #000000;font-family: 'Itim';font-weight: lighter;">title</p>
+                                                <p class="subtitle" style="font-size: 20px;color: #000000;font-family: 'Itim';font-weight: lighter;">subtitle</p>
+                                              </div>
+                                          </div>
+                                  
+                                      <div class="content">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                                        <a href="#">#css</a> <a href="#">#responsive</a>
+                                        <br>
+                                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        
+                            <div class="column is-half">
+                                <div class="card">
+                                    <div class="card-image">
+                                      <figure class="image is-16by9">
+                                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                                      </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="media">
+                                            <div class="media-left" style="width: 100%">
+                                                <p style="font-size: 35px;color: #000000;font-family: 'Itim';font-weight: lighter;">title</p>
+                                                <p class="subtitle" style="font-size: 20px;color: #000000;font-family: 'Itim';font-weight: lighter;">subtitle</p>
+                                              </div>
+                                          </div>
+                                  
+                                      <div class="content">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                                        <a href="#">#css</a> <a href="#">#responsive</a>
+                                        <br>
+                                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+
+                            <div class="column is-half">
+                                <div class="card">
+                                    <div class="card-image">
+                                      <figure class="image is-16by9">
+                                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                                      </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="media">
+                                            <div class="media-left" style="width: 100%">
+                                                <p style="font-size: 35px;color: #000000;font-family: 'Itim';font-weight: lighter;">title</p>
+                                                <p class="subtitle" style="font-size: 20px;color: #000000;font-family: 'Itim';font-weight: lighter;">subtitle</p>
+                                              </div>
+                                          </div>
+                                  
+                                      <div class="content">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                                        <a href="#">#css</a> <a href="#">#responsive</a>
+                                        <br>
+                                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+
+                        
+                        </div>
+                    </div>
+                </div>
+              </section>
+
+        </body>
+
+
+    </div>
+    <!-- javascript -->
+        <!-- index -->
+        <script src="/js/index.js"></script>
+        <!-- silde -->
+        <script src="/js/slide_index.js"></script>
+        <!-- bulma -->
+        <script src="/js/bulma.js"></script>
+
+
+    <!-- footer -->
+    <footer class="footer is-centered" style="background-color: #000000;color: #fff;">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-four-fifths">
+                <div class="columns">
+                    <div class="column has-text-centered">
+                        <div style="height: 2rem;"></div>
+                        <p style="font-size: 20px;">
+                            <strong style="color: #ffffff;">E-Portfolio</strong> by <a href="https://www.facebook.com/krt.korarit" target="_blank" style="color: rgb(58, 255, 163);">Korarit Saengthong</a> Copyright &copy; 2022 - 2023
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </footer>
+</html>
