@@ -27,7 +27,7 @@
 
         <!-- javascript -->
     </head>
-    <body>
+    <body onload="get_work_amount();">
         <!-- loading page-->
         <div>
 
@@ -266,7 +266,7 @@
                     <div class="container">
                         <p class="is-size-2 has-text-centered" style="font-family: 'Itim';">ผลงาน ด้านการพัฒนาซอฟต์แวร์</p>
                         <div style="height: 3rem;"></div>
-                        <div class="columns is-multiline is-centered">
+                        <div id="work_data" class="columns is-multiline is-centered">
 
                             <div class="column is-half play-animation-down">
                                 <div class="card">
@@ -359,7 +359,7 @@
                                                 <p style="font-size: 35px;color: #000000;font-family: 'Itim';font-weight: lighter;">title</p>
                                                 <p class="subtitle" style="font-size: 20px;color: #000000;font-family: 'Itim';font-weight: lighter;">subtitle</p>
                                               </div>
-                                          </div>
+                                        </div>
                                   
                                       <div class="content">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -373,6 +373,13 @@
                             </div>
 
                         
+                        </div>
+
+                        <!-- ปุ่มแสดงข้อมูลเพิ่มเติม -->
+                        <div id="load_more_work" style="display: none;">
+                          <div style="margin-top: 3rem;" class="has-text-centered">
+                            <button onclick="get_works(4)" class="button is-info is-large">โหลดข้อมูลเพิ่มเติม . . .</button>
+                          </div>
                         </div>
                     </div>
                 </div>
