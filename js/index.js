@@ -96,7 +96,7 @@ async function get_works(amount){
     for(let i = 0; i < data['data'].length; i++){
 
       html += '<div class="column is-half play-animation-down">';
-        html += '<div class="card">';
+        html += '<div class="card" style="height: 100%">';
         html += '<div class="card-image">';
 
           if(data['data'][i]['img'] != null){
@@ -115,27 +115,26 @@ async function get_works(amount){
         html += '<div class="media">';
           html += '<div class="media-left" style="width: 100%">';
             html += '<p style="font-size: 35px;color: #000000;font-family: '+"Itim"+';font-weight: lighter;">'+data['data'][i]['name']+'</p>';
-            html += '<p class="subtitle" style="font-size: 20px;color: #000000;font-family: '+"Itim"+';font-weight: lighter;">subtitle</p>';
           html += '</div>';
         html += '</div>';
 
         html += '<div class="content">';
-          html += data['data'][i]['content'];
+          html += '<p class="is-size-5">'+data['data'][i]['content']+'</p>';
           
-          html += '<div class="columns is-gapless" style="margin-top: 1rem">';
+          html += '<div class="columns is-mobile is-gapless" style="margin-top: 1rem;margin-bottom: 1rem">';
           if(data['data'][i]['tools'] != null){
             var tools_data = JSON.parse(data['data'][i]['tools']);
-            var color = ["dark","primary","link","link","success","warning","danger"];
+            var color = ["dark","primary","link","info","success","warning","danger"];
 
               for(x in tools_data){
                 html += '<div class="column is-narrow">';
-                html += '<span class="tag is-medium is-'+color[x]+' is-size-5">'+tools_data[x]+'</span>';
+                html += '<span class="tag is-large is-'+color[x]+'"><i class="fa-brands fa-'+tools_data[x]+'" style="font-size: 30px"></i></span>';
                 html += '</div>';
               }
             console.log(tools_data);
           }else{
             html += '<div class="column is-narrow">';
-              html += '<span class="tag is-medium is-warning is-size-5">ไม่มีเครื่องมือที่ใช้พัฒนา</span>';
+              html += '<span class="tag is-medium is-warning is-size-5">ไม่มีข้อมูล ของเครื่องมือที่ใช้พัฒนา</span>';
             html += '</div>';
           }
           html += '</div>';
