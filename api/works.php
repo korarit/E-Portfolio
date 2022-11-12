@@ -1,11 +1,13 @@
 <?php
+include('config.php');
 //เช๋คว่ามีค่าเข้ามาหรือไม่
 if(isset($_GET["amount"])){
     $amount = $_GET["amount"];
 
-    $conn = new mysqli('127.0.0.1', 'root', '123');
+    $conn = new mysqli($database_host, $database_user, $database_password, 'portfoliov2');
     $result = $conn->query("SELECT * FROM works LIMIT ".$amount);
-    $data = $result->fetch_assoc();
+    $data = $result->fetch_all(MYSQLI_ASSOC);
+
     $conn->close();
 
     if(count($data) != 0){
