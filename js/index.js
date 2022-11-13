@@ -85,14 +85,14 @@ async function button_check(amount){
     if (amount != 0) {
       works_data_amount += amount;
       console.log(works_data_amount);
-      get_works(works_data_amount);
+      get_works();
     }
   } else {
     document.getElementById('load_more_work').style.display = 'none';
   }
 }
 
-async function get_works(amount) {
+async function get_works() {
   //เพิ่มจำนวนข้อมูลที่ดึง
   var html = '';
   //ดึงข้อมูลจาก api

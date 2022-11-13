@@ -94,8 +94,9 @@
             <div style="height: 1rem;"></div>
             <div class="columns is-centered">
                 <div class="column is-four-fifths">
-                <div class="columns is-multiline is-centered">
-                    <div class="column is-two-fifths">
+                <div class="columns is-multiline is-centered" id="activities_data">
+
+                    <div class="column is-half">
                         <div class="card">
                             <div class="card-image">
                               <figure class="image is-16by9">
@@ -120,7 +121,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column is-two-fifths">
+
+                    <div class="column is-half">
                         <div class="card">
                             <div class="card-image">
                               <figure class="image is-16by9">
@@ -145,7 +147,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column is-two-fifths">
+
+                    <div class="column is-half">
                         <div class="card">
                             <div class="card-image">
                               <figure class="image is-16by9">
@@ -170,7 +173,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column is-two-fifths">
+
+                    <div class="column is-half">
                         <div class="card">
                             <div class="card-image">
                               <figure class="image is-16by9">
@@ -196,7 +200,7 @@
                         </div>
                     </div>
 
-                    <div class="column is-two-fifths">
+                    <div class="column is-half">
                       <div class="card">
                           <div class="card-image">
                             <figure class="image is-16by9">
@@ -222,7 +226,7 @@
                       </div>
                   </div>
 
-                  <div class="column is-two-fifths">
+                  <div class="column is-half">
                     <div class="card">
                         <div class="card-image">
                           <figure class="image is-16by9">
@@ -251,6 +255,13 @@
                 </div>
             </div>
 
+            <!-- ปุ่มแสดงข้อมูลเพิ่มเติม -->
+            <div id="load_more_activities" style="display: none;">
+              <div style="margin-top: 2rem;" class="has-text-centered">
+                <button onclick="button_check(4);" class="button is-info is-large">โหลดข้อมูลเพิ่มเติม . . .</button>
+              </div>
+            </div>
+
             </div>
             </section>
 
@@ -258,8 +269,10 @@
         </div>
 
         <!-- javascript-->
-            <!-- bulma -->
-            <script src="/js/bulma.js"></script>
+          <!-- activities js-->
+          <script src="/js/activities.js"></script>
+          <!-- bulma -->
+          <script src="/js/bulma.js"></script>
 
         <!-- footer -->
         <footer class="footer" style="background-color: #ffe4b1;">
