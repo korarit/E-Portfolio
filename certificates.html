@@ -56,12 +56,12 @@
                     </a>
 
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link is-active">
+                        <a class="navbar-link">
                             Activities / Works
                         </a>
                 
                         <div class="navbar-dropdown">
-                          <a class="navbar-item is-active">
+                          <a class="navbar-item" href="/activities.html">
                             <i class="fa-solid fa-briefcase"></i>&nbsp;&nbsp;Activities
                           </a>
                           <a class="navbar-item">
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                     
-                    <a class="navbar-item" href="/certificates.html">
+                    <a class="navbar-item is-active">
                         Certificates
                     </a>
             
@@ -93,18 +93,18 @@
             <section class="hero is-primary">
             <div class="hero-body">
 
-            <h2 class="title is-2 has-text-centered">กิจกรรมที่เข้าร่วม</h2>
+            <h2 class="title is-2 has-text-centered">เกียรติบัตร (Certificates)</h2>
             <div style="height: 1rem;"></div>
             <div class="columns is-centered">
                 <div class="column is-four-fifths">
-                <div class="columns is-multiline is-centered" id="activities_data">
+                <div class="columns is-multiline is-centered" id="cert_data">
                   <!-- in javascript activities-->
                 </div>
                 </div>
             </div>
 
             <!-- ปุ่มแสดงข้อมูลเพิ่มเติม -->
-            <div id="load_more_activities" style="display: none;">
+            <div id="load_more_certificate" style="display: none;">
               <div style="margin-top: 2rem;" class="has-text-centered">
                 <button onclick="button_check(4);" class="button is-info is-large">โหลดข้อมูลเพิ่มเติม . . .</button>
               </div>
@@ -118,7 +118,7 @@
 
         <!-- javascript-->
           <!-- activities js-->
-          <script src="/js/activities.js"></script>
+          <script src="/js/certificates.js"></script>
           <!-- bulma -->
           <script src="/js/bulma.js"></script>
 

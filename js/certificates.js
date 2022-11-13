@@ -1,26 +1,3 @@
-//scoll animation
-function scoll_animation() {
-    var reveals_down = document.querySelectorAll(".play-animation-down");
-    //down row animation
-    for (var i = 0; i < reveals_down.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals_down[i].getBoundingClientRect().top;
-        var elementVisible = 150;
-  
-        if (elementTop < windowHeight - elementVisible) {
-        // reveals[i].classList.add("animatedFadeInUp");
-  
-            reveals_down[i].classList.add("fadeInDown-row");
-  
-        } else {
-            reveals_down[i].classList.remove("fadeInDown-row");
-        }
-    }
-}
-  
-window.addEventListener("scroll", scoll_animation);
-  
-  
 async function get_json(url) {
     const file = await fetch(url);
     const json = await file.json();
@@ -28,16 +5,17 @@ async function get_json(url) {
     return json;
 }
 
-//จำนวน กิจกรรมที่แสดง
-let activities_data_amount = 6;
+
+//จำนวน เกียรติบัตรที่แสดง
+let certificate_data_amount = 10;
 
 async function get_activities_amount() {
   //ดึงข้อมูลจาก api
-  get_json('/api/activitys.php?amount=1').then((data) => {
+  get_json('/api/cert.php?amount=1').then((data) => {
 
     //ถ้าจำนวนผลงานเกิน 6งานแสดงปุ่มโหลดเพิ่มเติม
-    if (data['count_all'] > 6) {
-      document.getElementById('load_more_activities').style.display = 'block';
+    if (data['count_all'] > 10) {
+      document.getElementById('load_more_certificate').style.display = 'block';
     }
   }
   )
@@ -45,22 +23,22 @@ async function get_activities_amount() {
 
 async function button_check(amount){
     //ปิดปุ่ม
-    const data = await get_json('/api/activitys.php?amount=0');
-    if (Number(data['count_all']) > activities_data_amount) {
+    const data = await get_json('/api/cert.php?amount=1');
+    if (Number(data['count_all']) > certificate_data_amount) {
         if (amount != 0) {
-            activities_data_amount += amount;
-            console.log(activities_data_amount);
+            certificate_data_amount += amount;
+            console.log(certificate_data_amount);
             get_activities();
         }
     } else {
-        document.getElementById('load_more_activities').style.display = 'none';
+        document.getElementById('load_more_certificate').style.display = 'none';
     }
 }
 
 async function get_activities(){
     //html
     var html = '';
-    const data = await get_json('/api/activitys.php?amount=' + activities_data_amount);
+    const data = await get_json('/api/cert.php?amount=' + certificate_data_amount);
 
     for (let i = 0; i < data['data'].length; i++) {
         html += '<div class="column is-two-fifths">';
@@ -68,10 +46,8 @@ async function get_activities(){
                 html += '<div class="card-image">';
 
                     if(data['data'][i]["img"] != null){
-                        var json = JSON.parse(data['data'][i]["img"]);
-
                         html += '<figure class="image is-16by9">';
-                        html += '<img src="'+json[0]+'" alt="Placeholder image">';
+                        html += '<img src="'+data['data'][i]["img"]+'" alt="Placeholder image">';
                         html += '</figure>';
                     }else{
                         html += '<figure class="image is-16by9">';
@@ -84,7 +60,7 @@ async function get_activities(){
                     html += '<div class="media">';
                         html += '<div class="media-left" style="width: 100%">';
                         html += '<p style="font-size: 30px;color: #000000;font-family: ' + "Itim" + ';font-weight: lighter;">'+data["data"][i]["name"]+'</p>';
-                        html += '<p style="font-size: 20px;color: #000000;font-family: ' + "Itim" + ';font-weight: lighter;">'+data["data"][i]["address"]+'</p>';
+                        html += '<p style="font-size: 20px;color: #000000;font-family: ' + "Itim" + ';font-weight: lighter;">'+data["data"][i]["institution"]+'</p>';
                         html += '</div>';
                     html += '</div>';
 
@@ -95,17 +71,18 @@ async function get_activities(){
             html += '</div>';
         html += '</div>';
     }
-    document.getElementById('activities_data').innerHTML = html;
+    document.getElementById('cert_data').innerHTML = html;
 
-    if (Number(data['count_all']) <= activities_data_amount) {
-        document.getElementById('load_more_activities').style.display = 'none';
+    if (Number(data['count_all']) <= certificate_data_amount) {
+        document.getElementById('load_more_certificate').style.display = 'none';
     }
 }
 
+//แสดงเกียรติบัตรตอน load หน้า
 async function get_activities_load(){
     //html
     var html = '';
-    const data = await get_json('/api/activitys.php?amount=6');
+    const data = await get_json('/api/cert.php?amount=10');
 
     for (let i = 0; i < data['data'].length; i++) {
         html += '<div class="column is-two-fifths">';
@@ -129,7 +106,7 @@ async function get_activities_load(){
                     html += '<div class="media">';
                         html += '<div class="media-left" style="width: 100%">';
                         html += '<p style="font-size: 30px;color: #000000;font-family: ' + "Itim" + ';font-weight: lighter;">'+data["data"][i]["name"]+'</p>';
-                        html += '<p style="font-size: 20px;color: #000000;font-family: ' + "Itim" + ';font-weight: lighter;">'+data["data"][i]["address"]+'</p>';
+                        html += '<p style="font-size: 20px;color: #000000;font-family: ' + "Itim" + ';font-weight: lighter;">'+data["data"][i]["institution"]+'</p>';
                         html += '</div>';
                     html += '</div>';
 
@@ -140,6 +117,6 @@ async function get_activities_load(){
             html += '</div>';
         html += '</div>';
     }
-    document.getElementById('activities_data').innerHTML = html;
+    document.getElementById('cert_data').innerHTML = html;
 }
-document.getElementById("activities_data").onload = get_activities_load();
+document.getElementById("cert_data").onload = get_activities_load();

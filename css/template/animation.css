@@ -68,6 +68,10 @@
 .animation-delay-2 {
     animation-delay: 2s;
 }
+.animation-delay-row-2 {
+    animation-delay: 2s;
+}
+
 .animation-delay-3 {
     animation-delay: 3s;
 }
@@ -104,6 +108,13 @@
   }
 
 /* responsive */
+@media screen and (max-width: 830px) {
+    .fadeInDown-row{
+        opacity: 0;
+        animation: fadeInRight 1.5s ease-in both;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .fadeInLeft {
         animation: fadeInRight 1.5s ease-in both;
@@ -114,6 +125,12 @@
         animation: fadeInRight 1.5s ease-in both;
     }
     .animation-delay-row-1{
+        animation-delay: 0s;
+    }
+    .animation-delay-row-2{
+        animation-delay: 0s;
+    }
+    .animation-delay-row-3{
         animation-delay: 0s;
     }
 }
