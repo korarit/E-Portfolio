@@ -46,8 +46,10 @@ async function get_activities(){
                 html += '<div class="card-image">';
 
                     if(data['data'][i]["img"] != null){
+                        var img = JSON.parse(data['data'][i]["img"]);
+
                         html += '<figure class="image is-16by9">';
-                        html += '<img src="'+data['data'][i]["img"]+'" alt="Placeholder image">';
+                        html += '<img src="'+img[0]+'" alt="Placeholder image">';
                         html += '</figure>';
                     }else{
                         html += '<figure class="image is-16by9">';
