@@ -128,9 +128,9 @@ function cert_zoom (img){
     document.getElementById("image-zoom").src = img;
 
     //เปิด modal zoom
-    document.getElementById("certificate-zoom").style.display = "block";
+    document.getElementById("certificate-zoom").classList.add("is-active");
 }
 
 function close_zoom (){
-    document.getElementById("certificate-zoom").style.display = "none";
+    document.getElementById("certificate-zoom").classList.remove("is-active");
 }
