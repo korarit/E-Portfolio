@@ -49,7 +49,7 @@ async function get_activities(){
                         var img = JSON.parse(data['data'][i]["img"]);
 
                         html += '<figure class="image is-16by9">';
-                        html += '<img src="'+img[0]+'" alt="Placeholder image">';
+                        html += '<img onclick="cert_zoom('+"'"+img[0]+"'"+')" src="'+img[0]+'" alt="Placeholder image">';
                         html += '</figure>';
                     }else{
                         html += '<figure class="image is-16by9">';
@@ -95,7 +95,7 @@ async function get_activities_load(){
                         var json = JSON.parse(data['data'][i]["img"]);
 
                         html += '<figure class="image is-16by9">';
-                        html += '<img src="'+json[0]+'" alt="Placeholder image">';
+                        html += '<img onclick="cert_zoom('+"'"+json[0]+"'"+')" src="'+json[0]+'" alt="Placeholder image">';
                         html += '</figure>';
                     }else{
                         html += '<figure class="image is-16by9">';
@@ -122,3 +122,15 @@ async function get_activities_load(){
     document.getElementById('cert_data').innerHTML = html;
 }
 document.getElementById("cert_data").onload = get_activities_load();
+
+function cert_zoom (img){
+    //ใส่รูป
+    document.getElementById("image-zoom").src = img;
+
+    //เปิด modal zoom
+    document.getElementById("certificate-zoom").style.display = "block";
+}
+
+function close_zoom (){
+    document.getElementById("certificate-zoom").style.display = "none";
+}
