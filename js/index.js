@@ -100,7 +100,7 @@ async function get_works() {
   for (let i = 0; i < data['data'].length; i++) {
 
     html += '<div class="column is-half play-animation-down">';
-    html += '<div class="card" style="height: 100%">';
+    html += '<div class="card">';
     html += '<div class="card-image">';
 
     if (data['data'][i]['img'] != null) {
@@ -118,11 +118,11 @@ async function get_works() {
     html += '<div class="card-content">';
     html += '<div class="media">';
     html += '<div class="media-left" style="width: 100%">';
-    html += '<p style="font-size: 35px;color: #000000;font-family: ' + "Itim" + ';font-weight: lighter;">' + data['data'][i]['name'] + '</p>';
+    html += '<p style="font-size: 30px;color: #000000;font-family: ' + "Itim" + ';font-weight: lighter;">' + data['data'][i]['name'] + '</p>';
     html += '</div>';
     html += '</div>';
 
-    html += '<div class="content">';
+    html += '<div class="content" style="min-height:11rem;max-height: 14rem">';
     html += '<p class="is-size-5">' + data['data'][i]['content'] + '</p>';
 
     html += '<div class="columns is-mobile is-gapless" style="margin-top: 1rem;margin-bottom: 1rem">';
@@ -145,6 +145,36 @@ async function get_works() {
 
     html += '</div>';
     html += '</div>';
+
+    var more_data = JSON.parse(data['data'][i]['more']);
+    html += '<footer class="card-footer">';
+      
+      if(more_data["github"] != null){
+      html += '<a href="'+more_data["github"]+'" target="_blank" class="card-footer-item"><span class="icon-text" style="font-weight: bold;font-size: 18px">'+
+      '<span class="icon">'+'<i class="fa-brands fa-github"></i>'+
+      '</span>'+
+      '<span>GITHUB</span>'+
+      '</span>'+
+      '</a>';
+      }
+      if (more_data["demo"] != null){
+      html += '<a href="'+more_data["demo"]+'" target="_blank" class="card-footer-item"><span class="icon-text" style="font-weight: bold;font-size: 18px">'+
+      '<span class="icon">'+'<i class="fa-solid fa-desktop"></i>'+
+      '</span>'+
+      '<span>DEMO</span>'+
+      '</span>'+
+      '</a>';
+      }
+      if (more_data["youtube"] != null){
+      html += '<a href="'+more_data["youtube"]+'" target="_blank" class="card-footer-item"><span class="icon-text" style="font-weight: bold;font-size: 18px">'+
+      '<span class="icon">'+'<i class="fa-brands fa-youtube"></i>'+
+      '</span>'+
+      '<span>GITHUB</span>'+
+      '</span>'+
+      '</a>';
+      }
+    html += '</footer>';
+
     html += '</div>';
     html += '</div>';
 
@@ -168,52 +198,91 @@ async function get_works_load() {
   for (let i = 0; i < data['data'].length; i++) {
 
     html += '<div class="column is-half play-animation-down">';
-    html += '<div class="card" style="height: 100%">';
+    html += '<div class="card">';
+
     html += '<div class="card-image">';
 
-    if (data['data'][i]['img'] != null) {
-      html += '<figure class="image is-16by9">';
-      html += '<img src="' + data['data'][i]['img'] + '" alt="Placeholder image">';
-      html += '</figure>';
-    } else {
-      html += '<figure class="image is-16by9">';
-      html += '<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">';
-      html += '</figure>';
-    }
+      if (data['data'][i]['img'] != null) {
+        html += '<figure class="image is-16by9">';
+        html += '<img src="' + data['data'][i]['img'] + '" alt="Placeholder image">';
+        html += '</figure>';
+      } else {
+        html += '<figure class="image is-16by9">';
+        html += '<img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">';
+        html += '</figure>';
+      }
 
     html += '</div>';
 
     html += '<div class="card-content">';
+
     html += '<div class="media">';
     html += '<div class="media-left" style="width: 100%">';
     html += '<p style="font-size: 35px;color: #000000;font-family: ' + "Itim" + ';font-weight: lighter;">' + data['data'][i]['name'] + '</p>';
     html += '</div>';
     html += '</div>';
 
-    html += '<div class="content">';
+    html += '<div class="content" style="min-height:11rem;max-height: 14rem">';
     html += '<p class="is-size-5">' + data['data'][i]['content'] + '</p>';
 
-    html += '<div class="columns is-mobile is-gapless" style="margin-top: 1rem;margin-bottom: 1rem">';
-    if (data['data'][i]['tools'] != null) {
-      var tools_data = JSON.parse(data['data'][i]['tools']);
-      var color = ["dark", "primary", "link", "info", "success", "warning", "danger"];
+      html += '<div class="columns is-mobile is-gapless" style="margin-top: 1rem;margin-bottom: 1rem">';
+      if (data['data'][i]['tools'] != null) {
+        var tools_data = JSON.parse(data['data'][i]['tools']);
+        var color = ["dark", "primary", "link", "info", "success", "warning", "danger"];
 
-      for (x in tools_data) {
+        for (x in tools_data) {
+          html += '<div class="column is-narrow">';
+          html += '<span class="tag is-large is-' + color[x] + '"><i class="fa-brands fa-' + tools_data[x] + '" style="font-size: 30px"></i></span>';
+          html += '</div>';
+        }
+        console.log(tools_data);
+      } else {
         html += '<div class="column is-narrow">';
-        html += '<span class="tag is-large is-' + color[x] + '"><i class="fa-brands fa-' + tools_data[x] + '" style="font-size: 30px"></i></span>';
+        html += '<span class="tag is-medium is-warning is-size-5">ไม่มีข้อมูล ของเครื่องมือที่ใช้พัฒนา</span>';
         html += '</div>';
       }
-      console.log(tools_data);
-    } else {
-      html += '<div class="column is-narrow">';
-      html += '<span class="tag is-medium is-warning is-size-5">ไม่มีข้อมูล ของเครื่องมือที่ใช้พัฒนา</span>';
       html += '</div>';
-    }
+
+    //ปิด content
     html += '</div>';
 
+
+    //ปิด card-content
     html += '</div>';
+    
+    //footer card
+    var more_data = JSON.parse(data['data'][i]['more']);
+    html += '<footer class="card-footer">';
+      
+      if(more_data["github"] != null){
+        html += '<a href="'+more_data["github"]+'" target="_blank" class="card-footer-item"><span class="icon-text" style="font-weight: bold;font-size: 18px">'+
+        '<span class="icon">'+'<i class="fa-brands fa-github"></i>'+
+        '</span>'+
+        '<span>GITHUB</span>'+
+        '</span>'+
+        '</a>';
+      }
+      if (more_data["demo"] != null){
+        html += '<a href="'+more_data["demo"]+'" target="_blank" class="card-footer-item"><span class="icon-text" style="font-weight: bold;font-size: 18px">'+
+        '<span class="icon">'+'<i class="fa-solid fa-desktop"></i>'+
+        '</span>'+
+        '<span>DEMO</span>'+
+        '</span>'+
+        '</a>';
+      }
+      if (more_data["youtube"] != null){
+        html += '<a href="'+more_data["youtube"]+'" target="_blank" class="card-footer-item"><span class="icon-text" style="font-weight: bold;font-size: 18px">'+
+        '<span class="icon">'+'<i class="fa-brands fa-youtube"></i>'+
+        '</span>'+
+        '<span>GITHUB</span>'+
+        '</span>'+
+        '</a>';
+      }
+    html += '</footer>';
+
+    //ปิด card
     html += '</div>';
-    html += '</div>';
+    //ปิด column
     html += '</div>';
 
     //console.log(data['data'][i]['tools']);
