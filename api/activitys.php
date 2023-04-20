@@ -40,5 +40,4 @@ if(isset($_GET["amount"])){
     $code = array("status" => "404", "reason" => "ไม่ได้กำหนดจำนวนข้อมูลที่ต้องการดึง");
     echo json_encode($code, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
 }
-
 ?>
