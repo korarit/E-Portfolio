@@ -100,7 +100,7 @@ async function get_works() {
   for (let i = 0; i < data['data'].length; i++) {
 
     html += '<div class="column is-half play-animation-down">';
-    html += '<div class="card">';
+    html += '<div class="card" style="height: 100%">';
     html += '<div class="card-image">';
 
     if (data['data'][i]['img'] != null) {
@@ -198,7 +198,7 @@ async function get_works_load() {
   for (let i = 0; i < data['data'].length; i++) {
 
     html += '<div class="column is-half play-animation-down">';
-    html += '<div class="card">';
+    html += '<div class="card" style="height: 100%">';
 
     html += '<div class="card-image">';
 
