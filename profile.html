@@ -104,9 +104,9 @@
                                     <t style="font-size: 25px;font-family: 'Itim';line-height:27px;">จุดเริ่มต้นการเขียนโปรแกรมเกิดจาก เกม ความอยากพัฒนาเซิฟเวอร์เกม ทำให้ผมเริ่มมาเขียนระบบของเซิฟเวอร์เกม จนกลายมาเป็นการพัฒนา web , chatbot</t><br>
                                     </div>
                                     <div style="height: 1rem;"></div>
-                                    <button class="fadeInDown button is-primary"><strong>Education</strong></button>
-                                    <button class="fadeInDown animation-delay-1 button is-info"><strong>Contact</strong></button>
-                                    <button class="fadeInDown animation-delay-2 button is-dark"><strong>Dev Skill</strong></button>
+                                    <button class="fadeInDown button is-primary" onclick="click_toLayout('edu-section')"><strong>Education</strong></button>
+                                    <button class="fadeInDown animation-delay-1 button is-info" onclick="click_toLayout('contact-section')"><strong>Contact</strong></button>
+                                    <button class="fadeInDown animation-delay-2 button is-dark" onclick="click_toLayout('skill-section')"><strong>Dev Skill</strong></button>
                                 </div>
                             </div>
                         </div>
@@ -136,9 +136,9 @@
                                     <t style="font-size: 25px;font-family: 'Itim';line-height:27px;">จุดเริ่มต้นการเขียนโปรแกรมเกิดจาก เกม ความอยากพัฒนาเซิฟเวอร์เกม ทำให้ผมเริ่มมาเขียนระบบของเซิฟเวอร์เกม จนกลายมาเป็นการพัฒนา web , chatbot</t><br>
                                     
                                     <div style="height: 1rem;"></div>
-                                    <button class="button is-primary button-hover"><strong>Education</strong></button>
-                                    <button class="button is-info button-hover"><strong>Contact</strong></button>
-                                    <button class="button is-dark button-hover"><strong>Dev Skill</strong></button>
+                                    <button class="button is-primary button-hover" onclick="click_toLayout('edu-section')"><strong>Education</strong></button>
+                                    <button class="button is-info button-hover" onclick="click_toLayout('contact-section')"><strong>Contact</strong></button>
+                                    <button class="button is-dark button-hover" onclick="click_toLayout('skill-section')"><strong>Dev Skill</strong></button>
                                 </div>
                             </div>
                         </div>
@@ -158,6 +158,7 @@
                 
                 
             <!-- education -->
+            <div id="edu-section">
             <div class="is-hidden-tablet-only">
             <section class="hero is-Primary is-halfheight">
                 <div class="hero-body">
@@ -461,7 +462,9 @@
             </div>
 
 
+
             <!-- contact -->
+            <div id="contact-section">
             <!-- desktop only-->
             <div class="is-hidden-mobile is-hidden-tablet-only is-hidden-desktop-only">
             <section class="hero is-medium is-Link">
@@ -526,9 +529,11 @@
             </section>
             </div>
 
+            </div>
+
 
             <!-- skill -->
-            <section class="hero is-info is-medium">
+            <section class="hero is-info is-medium" id="skill-section">
                 <div class="hero-body is-align-items-start">
                   <div class="container">
                     <div class="columns is-full is-centered">

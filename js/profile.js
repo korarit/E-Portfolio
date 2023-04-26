@@ -29,4 +29,10 @@ function copytoclipboard(text) {
     // Alert the copied text
     //alert("Copied the text: " + copyText.value);
 }
-  
+
+function click_toLayout(id){
+    var elementTop = document.getElementById(id).getBoundingClientRect().top;
+    
+    document.body.scrollTop = elementTop;
+    document.documentElement.scrollTop = elementTop;
+}

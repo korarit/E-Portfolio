@@ -290,4 +290,13 @@ async function get_works_load() {
   //console.log(html);
   document.getElementById('work_data').innerHTML = html;
 }
+
+
+function click_toLayout(id){
+  var elementTop = document.getElementById(id).getBoundingClientRect().top;
+  
+  document.body.scrollTop = elementTop;
+  document.documentElement.scrollTop = elementTop;
+}
+
 document.getElementById("work_data").onload = get_works_load();
