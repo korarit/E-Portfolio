@@ -167,7 +167,7 @@ async function get_works() {
       '</span>'+
       '</a>';
       }
-      else if (more_data["demo"] != null){
+      if (more_data["demo"] != null){
       html += '<a href="'+more_data["demo"]+'" target="_blank" class="card-footer-item"><span class="icon-text" style="font-weight: bold;font-size: 18px">'+
       '<span class="icon">'+'<i class="fa-solid fa-desktop"></i>'+
       '</span>'+
@@ -175,7 +175,7 @@ async function get_works() {
       '</span>'+
       '</a>';
       }
-      else if (more_data["youtube"] != null){
+      if (more_data["youtube"] != null){
       html += '<a href="'+more_data["youtube"]+'" target="_blank" class="card-footer-item"><span class="icon-text" style="font-weight: bold;font-size: 18px">'+
       '<span class="icon">'+'<i class="fa-brands fa-youtube"></i>'+
       '</span>'+
@@ -285,7 +285,7 @@ async function get_works_load() {
         '</span>'+
         '</a>';
       }
-      else if (more_data["demo"] != null){
+      if (more_data["demo"] != null){
         html += '<a href="'+more_data["demo"]+'" target="_blank" class="card-footer-item"><span class="icon-text" style="font-weight: bold;font-size: 18px">'+
         '<span class="icon">'+'<i class="fa-solid fa-desktop"></i>'+
         '</span>'+
@@ -293,7 +293,7 @@ async function get_works_load() {
         '</span>'+
         '</a>';
       }
-      else if (more_data["youtube"] != null){
+      if (more_data["youtube"] != null){
         html += '<a href="'+more_data["youtube"]+'" target="_blank" class="card-footer-item"><span class="icon-text" style="font-weight: bold;font-size: 18px">'+
         '<span class="icon">'+'<i class="fa-brands fa-youtube"></i>'+
         '</span>'+
