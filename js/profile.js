@@ -30,9 +30,13 @@ function copytoclipboard(text) {
     //alert("Copied the text: " + copyText.value);
 }
 
-function click_toLayout(id){
-    var elementTop = document.getElementById(id).getBoundingClientRect().top;
+function click_toLayout(id) {
+    var element = document.getElementById(id);
+    var elementTop = element.getBoundingClientRect().top;
+    var offset = window.pageYOffset;
     
-    document.body.scrollTop = elementTop;
-    document.documentElement.scrollTop = elementTop;
-}
+    window.scroll({
+      top: elementTop + offset,
+      behavior: 'smooth'
+    });
+  }

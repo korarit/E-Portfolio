@@ -316,12 +316,15 @@ async function get_works_load() {
   document.getElementById('work_data').innerHTML = html;
 }
 
-async function click_toLayout(id){
-  var elementTop = document.getElementById(id).getBoundingClientRect().top;
+function click_toLayout(id) {
+  var element = document.getElementById(id);
+  var elementTop = element.getBoundingClientRect().top;
+  var offset = window.pageYOffset;
   
-  document.body.scrollTop = elementTop;
-  document.documentElement.scrollTop = elementTop;
-
+  window.scroll({
+    top: elementTop + offset,
+    behavior: 'smooth'
+  });
 }
 
 document.getElementById("work_data").onload = get_works_load();
