@@ -15,6 +15,8 @@
             <link rel="stylesheet" href="/css/template/animation.css">
             <!-- navbar -->
             <link rel="stylesheet" href="/css/template/navbar.css">
+            <!-- gallery-->
+            <link rel="stylesheet" href="/css/template/gallery.css">
 
             <!-- index -->
             <link rel="stylesheet" href="/css/profile.css">
@@ -130,5 +132,21 @@
                 </div>
             </div>
         </footer>
+
+
+        <!-- gallery modal-->
+        <div class="modal" id="gallery-modal">
+            <div class="modal-background"></div>
+            <button class="modal-close is-large" onclick="close_zoom();" aria-label="close"></button>
+            <div class="modal-content image-zoom">
+              <div class="image is-align-items-center">
+                <img src="" id="image-gallery" class="image-zoom">
+              </div>
+            </div>
+            <div class="modal-content" style="width: 100%;overflow: hidden;margin-top: 2%;">
+              <div class="columns is-mobile is-centered" id="gallery_list">
+                <!-- in javascript -->
+            </div>
+        </div>
     </body>
 </html>

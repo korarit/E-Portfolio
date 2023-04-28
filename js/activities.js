@@ -71,7 +71,7 @@ async function get_activities(){
                         var json = JSON.parse(data['data'][i]["img"]);
 
                         html += '<figure class="image is-16by9">';
-                        html += '<img src="'+json[0]+'" alt="Placeholder image">';
+                        html += '<img onclick="gallery('+"'"+data['data'][i]['id']+"'"+')" src="https://cdn.discordapp.com/attachments/'+json[0]+'" >';
                         html += '</figure>';
                     }else{
                         html += '<figure class="image is-16by9">';
@@ -116,7 +116,7 @@ async function get_activities_load(){
                         var json = JSON.parse(data['data'][i]["img"]);
 
                         html += '<figure class="image is-16by9">';
-                        html += '<img src="'+json[0]+'" alt="Placeholder image">';
+                        html += '<img onclick="gallery('+"'"+data['data'][i]['id']+"'"+')" src="https://cdn.discordapp.com/attachments/'+json[0]+'">';
                         html += '</figure>';
                     }else{
                         html += '<figure class="image is-16by9">';
@@ -143,3 +143,31 @@ async function get_activities_load(){
     document.getElementById('activities_data').innerHTML = html;
 }
 document.getElementById("activities_data").onload = get_activities_load();
+
+////////////////////////// gallery //////////////////////////
+
+async function gallery (id){
+    const img_list = await get_json('/api/activitys.php?get_img=' + id);
+  
+    var data = JSON.parse(img_list['data'][0]['img']);
+    var html = '';
+    for (let i = 0; i < data.length; i++) {
+      html += '<div class="column image-column">'+
+      '<img src="https://cdn.discordapp.com/attachments/'+data[i]+'" onclick="change_img(this)">'+
+      '</div>';
+    }
+    //สร้างรายการรูป
+    document.getElementById("gallery_list").innerHTML = html;
+  
+    //ใส่รูป
+    document.getElementById("image-gallery").src = "https://cdn.discordapp.com/attachments/"+data[0];
+  
+    //เปิด modal zoom
+    document.getElementById("gallery-modal").classList.add("is-active");
+  }
+  function change_img (img){
+    document.getElementById("image-gallery").src = img.src;
+  }
+  function close_zoom (){
+    document.getElementById("gallery-modal").classList.remove("is-active");
+  }

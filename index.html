@@ -11,12 +11,15 @@
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             <!-- icon font-awesome -->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
             <!-- timeline -->
             <link rel="stylesheet" href="/css/template/timeline.css">
             <!-- animation -->
             <link rel="stylesheet" href="/css/template/animation.css">
             <!-- navbar -->
             <link rel="stylesheet" href="/css/template/navbar.css">
+            <!-- image_zoom-->
+            <link rel="stylesheet" href="/css/template/gallery.css">
 
             <!-- index -->
             <link rel="stylesheet" href="/css/index.css">
@@ -196,10 +199,10 @@
                                 <div class="card" style="height: 100%;">
                                     <div class="card-image">
                                       <figure class="image is-16by9">
-                                        <img src="https://cdn.discordapp.com/attachments/943868890688159774/1100822877009354902/4-.6-4_1.png" alt="Placeholder image">
+                                        <img onclick="gallery('1')" src="https://cdn.discordapp.com/attachments/943868890688159774/1100822877009354902/4-.6-4_1.png" alt="Placeholder image">
                                       </figure>
                                     </div>
-                                    <div class="card-content" style="height: 39%;">
+                                    <div class="card-content">
                                       <div class="media">
                                         <div class="media-left" style="width: 100%">
                                             <p style="font-size: 30px;color: #000000;font-family: 'Itim';font-weight: lighter;">โครงงานคอมพิวเตอร์ประเภทซอฟต์แวร์</p>
@@ -209,10 +212,11 @@
                                   
                                       <div class="content">
                                         เป็นโครงงานการพัฒนา line bot สำหรับโรงเรียนโดย ภาษา PHP ร่วมกับ Vue.js โดยเพื่อพัฒนา ระบบเพื่อในการประชาสัมพันธ์ การเข้าร่วมกิจกรรมต่างๆ ของโรงเรียน การแจ้งลาต่างๆ สำหรับนักเรียน
+                                        <br><br>
                                       </div>
                                     </div>
                                     <footer class="card-footer">
-                                      <a href="" class="card-footer-item">
+                                      <a href="https://github.com/korarit/schoolchat" target="_blank" class="card-footer-item">
                                         <span class="icon-text" style="font-weight: bold;font-size: 18px"></span>
                                         <span class="icon"><i class="fa-brands fa-github"></i></span>
                                         <span>GITHUB</span>
@@ -226,7 +230,7 @@
                               <div class="card" style="height: 100%;">
                                   <div class="card-image">
                                     <figure class="image is-16by9">
-                                      <img src="https://cdn.discordapp.com/attachments/943868890688159774/1100822600701190264/image.png" alt="Placeholder image">
+                                      <img onclick="gallery('2')" src="https://cdn.discordapp.com/attachments/943868890688159774/1100822600701190264/image.png" alt="Placeholder image">
                                     </figure>
                                   </div>
                                   <div class="card-content">
@@ -251,7 +255,7 @@
                                 <div class="card">
                                     <div class="card-image">
                                       <figure class="image is-16by9">
-                                        <img src="https://cdn.discordapp.com/attachments/943868890688159774/1100823050208956596/image.png" alt="Placeholder image">
+                                        <img onclick="gallery('3')" src="https://cdn.discordapp.com/attachments/943868890688159774/1100823050208956596/image.png" alt="Placeholder image">
                                       </figure>
                                     </div>
                                     <div class="card-content">
@@ -267,10 +271,15 @@
                                       </div>
                                     </div>
                                     <footer class="card-footer">
-                                      <a href="" class="card-footer-item">
+                                      <a href="https://github.com/korarit/gamertocoder" target="_blank" class="card-footer-item">
                                         <span class="icon-text" style="font-weight: bold;font-size: 18px"></span>
                                         <span class="icon"><i class="fa-brands fa-github"></i></span>
                                         <span>GITHUB</span>
+                                      </a>
+                                      <a href="https://github-project.korarit.tk/gamertocoder/" target="_blank" class="card-footer-item">
+                                        <span class="icon-text" style="font-weight: bold;font-size: 18px"></span>
+                                        <span class="icon"><i class="fa-solid fa-desktop"></i></span>
+                                        <span>DEMO</span>
                                       </a>
                                     </footer>
                                   </div>
@@ -332,4 +341,19 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal" id="contest-zoom">
+      <div class="modal-background"></div>
+      <button class="modal-close is-large" onclick="close_zoom();" aria-label="close"></button>
+      <div class="modal-content image-zoom">
+        <div class="image is-align-items-center">
+          <img src="" id="image-gallery" class="image-zoom">
+        </div>
+      </div>
+      <div class="modal-content" style="width: 100%;overflow: hidden;margin-top: 2%;">
+        <div class="columns is-mobile is-centered" id="gallery_list">
+          
+        </div>
+      </div>
+  </div>
 </html>

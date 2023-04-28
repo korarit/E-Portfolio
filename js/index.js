@@ -132,7 +132,7 @@ async function get_works() {
 
       for (x in tools_data) {
         html += '<div class="column is-narrow">';
-        html += '<span class="tag is-large is-' + color[x] + '"><i class="fa-brands fa-' + tools_data[x] + '" style="font-size: 30px"></i></span>';
+        html += '<span class="tag is-large is-' + color[x] + ' style="height:40px;"><img src="https://cdn.discordapp.com/attachments/'+tools_data[x]+'" style="width:40px;height:40px"></span>';
         html += '</div>';
       }
       console.log(tools_data);
@@ -148,6 +148,16 @@ async function get_works() {
 
     var more_data = JSON.parse(data['data'][i]['more']);
     html += '<footer class="card-footer">';
+
+    if(more_data["comming"] == true){
+      html += '<div class="card-footer-item is-comming"><span class="icon-text" style="font-weight: bold;font-size: 18px">'+
+      '<span class="icon">'+
+      '<i class="fa-solid fa-clock"></i>'+
+      '</span>'+
+      '<span>อยู่ระห่างการออกแบบ concept</span>'+
+      '</span>'+
+      '</div>';
+    }else{
       
       if(more_data["github"] != null){
       html += '<a href="'+more_data["github"]+'" target="_blank" class="card-footer-item"><span class="icon-text" style="font-weight: bold;font-size: 18px">'+
@@ -157,7 +167,7 @@ async function get_works() {
       '</span>'+
       '</a>';
       }
-      if (more_data["demo"] != null){
+      else if (more_data["demo"] != null){
       html += '<a href="'+more_data["demo"]+'" target="_blank" class="card-footer-item"><span class="icon-text" style="font-weight: bold;font-size: 18px">'+
       '<span class="icon">'+'<i class="fa-solid fa-desktop"></i>'+
       '</span>'+
@@ -165,14 +175,15 @@ async function get_works() {
       '</span>'+
       '</a>';
       }
-      if (more_data["youtube"] != null){
+      else if (more_data["youtube"] != null){
       html += '<a href="'+more_data["youtube"]+'" target="_blank" class="card-footer-item"><span class="icon-text" style="font-weight: bold;font-size: 18px">'+
       '<span class="icon">'+'<i class="fa-brands fa-youtube"></i>'+
       '</span>'+
-      '<span>GITHUB</span>'+
+      '<span>YouTube</span>'+
       '</span>'+
       '</a>';
       }
+    }
     html += '</footer>';
 
     html += '</div>';
@@ -230,9 +241,10 @@ async function get_works_load() {
         var tools_data = JSON.parse(data['data'][i]['tools']);
         var color = ["dark", "primary", "link", "info", "success", "warning", "danger"];
 
+        //<i class="fa-brands fa-' + tools_data[x] + '" style="font-size: 30px"></i>
         for (x in tools_data) {
           html += '<div class="column is-narrow">';
-          html += '<span class="tag is-large is-' + color[x] + '"><i class="fa-brands fa-' + tools_data[x] + '" style="font-size: 30px"></i></span>';
+          html += '<span class="tag is-large is-' + color[x] + '"><img src="https://cdn.discordapp.com/attachments/'+tools_data[x]+'" style="width:40px;height:40px"></span>';
           html += '</div>';
         }
         console.log(tools_data);
@@ -254,6 +266,16 @@ async function get_works_load() {
     var more_data = JSON.parse(data['data'][i]['more']);
     html += '<footer class="card-footer">';
       
+    if(more_data["comming"] == true){
+      html += '<div class="card-footer-item is-comming"><span class="icon-text" style="font-weight: bold;font-size: 18px">'+
+      '<span class="icon">'+
+      '<i class="fa-solid fa-clock"></i>'+
+      '</span>'+
+      '<span>อยู่ระห่างการออกแบบ concept</span>'+
+      '</span>'+
+      '</div>';
+    }else{
+
       if(more_data["github"] != null){
         html += '<a href="'+more_data["github"]+'" target="_blank" class="card-footer-item"><span class="icon-text" style="font-weight: bold;font-size: 18px">'+
         '<span class="icon">'+'<i class="fa-brands fa-github"></i>'+
@@ -262,7 +284,7 @@ async function get_works_load() {
         '</span>'+
         '</a>';
       }
-      if (more_data["demo"] != null){
+      else if (more_data["demo"] != null){
         html += '<a href="'+more_data["demo"]+'" target="_blank" class="card-footer-item"><span class="icon-text" style="font-weight: bold;font-size: 18px">'+
         '<span class="icon">'+'<i class="fa-solid fa-desktop"></i>'+
         '</span>'+
@@ -270,7 +292,7 @@ async function get_works_load() {
         '</span>'+
         '</a>';
       }
-      if (more_data["youtube"] != null){
+      else if (more_data["youtube"] != null){
         html += '<a href="'+more_data["youtube"]+'" target="_blank" class="card-footer-item"><span class="icon-text" style="font-weight: bold;font-size: 18px">'+
         '<span class="icon">'+'<i class="fa-brands fa-youtube"></i>'+
         '</span>'+
@@ -278,6 +300,7 @@ async function get_works_load() {
         '</span>'+
         '</a>';
       }
+    }
     html += '</footer>';
 
     //ปิด card
@@ -291,12 +314,38 @@ async function get_works_load() {
   document.getElementById('work_data').innerHTML = html;
 }
 
-
-function click_toLayout(id){
+async function click_toLayout(id){
   var elementTop = document.getElementById(id).getBoundingClientRect().top;
   
   document.body.scrollTop = elementTop;
   document.documentElement.scrollTop = elementTop;
+
 }
 
 document.getElementById("work_data").onload = get_works_load();
+
+async function gallery (id){
+  const img_list = await get_json('/api/gallery.php?id=' + id);
+
+  var data = JSON.parse(img_list['data']);
+  var html = '';
+  for (let i = 0; i < data.length; i++) {
+    html += '<div class="column image-column">'+
+    '<img src="https://cdn.discordapp.com/attachments/'+data[i]+'" onclick="change_img(this)">'+
+    '</div>';
+  }
+  //สร้างรายการรูป
+  document.getElementById("gallery_list").innerHTML = html;
+
+  //ใส่รูป
+  document.getElementById("image-gallery").src = 'https://cdn.discordapp.com/attachments/'+data[0];
+
+  //เปิด modal zoom
+  document.getElementById("contest-zoom").classList.add("is-active");
+}
+function change_img (img){
+  document.getElementById("image-gallery").src = img.src;
+}
+function close_zoom (){
+  document.getElementById("contest-zoom").classList.remove("is-active");
+}

@@ -1,0 +1,38 @@
+
+.image-zoom{
+    width: 40%;
+}
+.image-column{
+    flex: none;
+    width: 15%;
+}
+@media screen and (max-width: 1200px) {
+    .image-zoom{
+        width: 90%;
+    }
+    .image-gallery{
+        width: 20%;
+    }
+    .is-2{
+        width: 50%;
+    }
+    .image-column{
+        flex: none;
+        width: 30%;
+    }
+}
+@media screen and (max-width: 820px) {
+    .image-zoom{
+        width: 90%;
+    }
+    .image-gallery{
+        width: 20%;
+    }
+    .is-2{
+        width: 50%;
+    }
+    .image-column{
+        flex: none;
+        width: 33%;
+    }
+}
