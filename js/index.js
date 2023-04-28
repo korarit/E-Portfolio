@@ -99,8 +99,8 @@ async function get_works() {
   const data = await get_json('/api/works.php?amount=' + works_data_amount);
   for (let i = 0; i < data['data'].length; i++) {
 
-    html += '<div class="column is-half play-animation-down">';
-    html += '<div class="card" style="height: 100%">';
+    html += '<div class="column is-half is-flex play-animation-down">';
+    html += '<div class="card is-flex-direction-column" style="min-height: 100%">';
     html += '<div class="card-image">';
 
     if (data['data'][i]['img'] != null) {
@@ -122,10 +122,10 @@ async function get_works() {
     html += '</div>';
     html += '</div>';
 
-    html += '<div class="content" style="min-height:11rem;max-height: 14rem">';
+    html += '<div class="content" style="min-height:11rem;">';
     html += '<p class="is-size-5">' + data['data'][i]['content'] + '</p>';
 
-    html += '<div class="columns is-mobile is-gapless" style="margin-top: 1rem;margin-bottom: 1rem">';
+    html += '<div class="columns is-mobile is-gapless is-multiline" style="margin-top: 1rem;margin-bottom: 1rem">';
     if (data['data'][i]['tools'] != null) {
       var tools_data = JSON.parse(data['data'][i]['tools']);
       var color = ["dark", "primary", "link", "info", "success", "warning", "danger"];
@@ -208,8 +208,9 @@ async function get_works_load() {
   const data = await get_json('/api/works.php?amount=' + works_data_amount);
   for (let i = 0; i < data['data'].length; i++) {
 
-    html += '<div class="column is-half play-animation-down">';
-    html += '<div class="card" style="height: 100%">';
+    html += '<div class="column is-half is-flex play-animation-down">';
+
+    html += '<div class="card is-flex-direction-column" style="min-height: 100%;">';
 
     html += '<div class="card-image">';
 
@@ -233,10 +234,10 @@ async function get_works_load() {
     html += '</div>';
     html += '</div>';
 
-    html += '<div class="content" style="min-height:11rem;max-height: 14rem">';
+    html += '<div class="content">';
     html += '<p class="is-size-5">' + data['data'][i]['content'] + '</p>';
 
-      html += '<div class="columns is-mobile is-gapless" style="margin-top: 1rem;margin-bottom: 1rem">';
+      html += '<div class="columns is-mobile is-gapless is-multiline" style="margin-top: 1rem;margin-bottom: 1rem">';
       if (data['data'][i]['tools'] != null) {
         var tools_data = JSON.parse(data['data'][i]['tools']);
         var color = ["dark", "primary", "link", "info", "success", "warning", "danger"];
@@ -305,6 +306,7 @@ async function get_works_load() {
 
     //ปิด card
     html += '</div>';
+
     //ปิด column
     html += '</div>';
 
